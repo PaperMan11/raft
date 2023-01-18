@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./;protobuf";
+
+message SnapshotRecoveryRequest {
+    string  LeaderName=1;
+    uint64  LastIndex=2;
+    uint64  LastTerm=3;     
+	message Peer {
+		string Name=1;
+		string ConnectionString=2;
+	}  
+	repeated Peer  Peers=4;  
+
+	bytes   State=5;
+}

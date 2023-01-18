@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./;protobuf";
+
+message SnapshotRecoveryResponse {
+	uint64 Term=1;     
+	bool Success=2;
+	uint64 CommitIndex=3;
+}

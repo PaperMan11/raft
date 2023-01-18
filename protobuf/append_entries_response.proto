@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./;protobuf";
+
+message AppendEntriesResponse {
+	uint64 Term=1;
+	uint64 Index=2;
+	uint64 CommitIndex=3;
+	bool   Success=4;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./;protobuf";
+
+message RequestVoteRequest {
+	uint64 Term=1;
+	uint64 LastLogIndex=2;
+	uint64 LastLogTerm=3;
+	string CandidateName=4;
+}
