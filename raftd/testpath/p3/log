@@ -1,0 +1,12 @@
+      4d
+	raft:join">{"name":"28f3f14","connectionString":"http://localhost:4001"}
+       c
+raft:nop      4d
+	raft:join">{"name":"3da4da6","connectionString":"http://localhost:4002"}
+      4d
+	raft:join">{"name":"5854eda","connectionString":"http://localhost:4003"}
+      27
+write"{"key":"foo","value":"bar"}
+       e
+raft:nop      29
+write"{"key":"tan","value":"123"}
